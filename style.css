@@ -1,0 +1,76 @@
+#escenario {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background-image: url("images/fondo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* PERSONAJE */
+
+#personaje {
+    position: absolute;
+
+    left: 45%;
+    bottom: 80px;
+
+    width: 180px;
+
+    transition: left .15s linear;
+}
+
+
+/* IMAGEN DEL PERSONAJE */
+
+#personaje img {
+    width: 100%;
+
+    display: block;
+
+    user-select: none;
+}
+
+
+/* ANIMACIÓN AL CAMINAR */
+
+.caminando {
+    animation: caminar .35s infinite alternate;
+}
+
+
+@keyframes caminar {
+
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+/* ANIMACIÓN AL HABLAR */
+
+.hablando {
+    animation: hablar .2s infinite alternate;
+}
+
+
+@keyframes hablar {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.03);
+    }
+
+}
